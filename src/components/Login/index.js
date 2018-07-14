@@ -91,6 +91,11 @@ class Login extends Component {
     const { type, tabs } = this.state;
     const TabChildren = [];
     const otherChildren = [];
+    console.log('className: ' + className);
+    console.log('children: ' + children);
+    console.log('type: ' + type);
+    console.log('tabs: ' + tabs);
+
     React.Children.forEach(children, item => {
       if (!item) {
         return;

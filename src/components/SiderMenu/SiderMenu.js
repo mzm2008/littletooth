@@ -4,10 +4,12 @@ import pathToRegexp from 'path-to-regexp';
 import { Link } from 'dva/router';
 import styles from './index.less';
 import { urlToList } from '../_utils/pathTools';
+import logo_pic from '../../assets/logo_pic.svg';
 
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
+// 获取图标
 // Allow menu.js config icon as string or ReactNode
 //   icon: 'setting',
 //   icon: 'http://demo.com/icon.png',
@@ -232,10 +234,10 @@ export default class SiderMenu extends PureComponent {
         width={256}
         className={styles.sider}
       >
-        <div className={styles.logo} key="logo">
+        <div className={styles.logo} key="logo_pic">
           <Link to="/">
-            <img src={logo} alt="logo" />
-            <h1>Ant Design Pro</h1>
+            <img src={logo_pic} alt="logo" />
+            <h1>小门牙</h1>
           </Link>
         </div>
         <Menu
