@@ -15,6 +15,10 @@ const modelNotExisted = (app, model) =>
 // wrapper of dynamic
 const dynamicWrapper = (app, models, component) => {
   // register models
+  console.log('---app--'+app);
+  console.log('---models--'+models);
+  console.log('---component--'+component);
+  
   models.forEach(model => {
     if (modelNotExisted(app, model)) {
       // eslint-disable-next-line
@@ -57,6 +61,7 @@ const dynamicWrapper = (app, models, component) => {
 };
 
 function getFlatMenuData(menus) {
+  console.log('-----menus----'+menus)
   let keys = {};
   menus.forEach(item => {
     if (item.children) {

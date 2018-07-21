@@ -142,6 +142,9 @@ function getRenderArr(routes) {
  * @param {routerData} routerData
  */
 export function getRoutes(path, routerData) {
+  console.log('path------'+path);
+  console.log('parouterDatath------'+routerData);
+  
   let routes = Object.keys(routerData).filter(
     routePath => routePath.indexOf(path) === 0 && routePath !== path
   );

@@ -22,6 +22,10 @@ export default class LoginPage extends Component {
   };
 
   handleSubmit = (err, values) => {
+    
+console.log('1------------'+err);
+console.log('2------------'+values);
+
     const { type } = this.state;
     const { dispatch } = this.props;
     if (!err) {
@@ -76,15 +80,15 @@ export default class LoginPage extends Component {
             </a>
           </div>
           <Submit loading={submitting}>登录</Submit>
-          {/* <div className={styles.other}>
+          <div className={styles.other}>
             其他登录方式
-            <Icon className={styles.icon} type="alipay-circle" />
-            <Icon className={styles.icon} type="taobao-circle" />
-            <Icon className={styles.icon} type="weibo-circle" />
+            <Icon className={styles.icon} type="alipay-circle"/>
+            <Icon className={styles.icon} type="taobao-circle"/>
+            <Icon className={styles.icon} type="weibo-circle"/>
             <Link className={styles.register} to="/user/register">
-              注册账户
+              注册账户1
             </Link>
-          </div> */}
+          </div>
         </Login>
       </div>
     );

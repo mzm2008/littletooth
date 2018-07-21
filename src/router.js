@@ -11,20 +11,24 @@ const { AuthorizedRoute } = Authorized;
 
 function RouterConfig({ history, app }) {
   const routerData = getRouterData(app);
+  console.log(1111111111111);
+  console.log(getQueryPath('/user/login'));
+  
   const UserLayout = routerData['/user'].component;
   const BasicLayout = routerData['/'].component;
   return (
     <LocaleProvider locale={zhCN}>
       <ConnectedRouter history={history}>
         <Switch>
+         
           <Route path="/user" component={UserLayout} />
           <AuthorizedRoute
             path="/"
             render={props => <BasicLayout {...props} />}
             authority={['admin', 'user']}
-            redirectPath={getQueryPath('/user/login', {
-              redirect: window.location.href,
-            })}
+            // redirectPath={getQueryPath('/user/login', {
+            //   redirect: window.location.href,
+            // })}
           />
         </Switch>
       </ConnectedRouter>
